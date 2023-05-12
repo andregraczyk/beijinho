@@ -1,0 +1,70 @@
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    
+  }
+  body{
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    font-family: 'Inter', sans-serif;
+  }
+  h1{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 530px;
+    position: relative;
+  }
+  .box button{
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    top: 40%;
+    left: 45%;
+    cursor: pointer;
+    border: none;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: #5cba31;
+  }
+  img{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0;
+    height: 0;
+  }
+  .active{
+    top: 50%;
+    height: 100%;
+    opacity: 1;
+    transition: all 420ms ease-in;
+  }
+  .box #movel{
+    left: 55%;
+    background: #ff0f33;
+  }
+  .overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 0;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+  }
+  .overlay-active{
+    width: 100%;
+  }
+  .grande#fixo{
+    width: 300px;
+    height: 300px;
+    left: 50%;
+  }
