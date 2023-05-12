@@ -1,72 +1,81 @@
 .container{
-    max-width: 1300px;
-    margin: 0 auto;
-    
-  }
-  body{
-    background: #4cb8c4; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4cb8c4, #3cd3ad); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
-  }
+  max-width: 100%;
+  margin: 0 auto;
+}
 
-  h1{
-    color: #fff;
-    text-align: center;
-    margin-bottom: 0;
-  }
-  .box{
-    width: 1200px;
-    margin: 0 auto;
-    height: 530px;
-    position: relative;
-  }
-  .box button{
-    position: absolute;
-    height: 40px;
-    width: 100px;
-    top: 40%;
-    left: 45%;
-    cursor: pointer;
-    border: none;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    background: #5cba31;
-  }
-  img{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    opacity: 0;
-    height: 0;
-  }
-  .active{
-    top: 50%;
-    height: 100%;
-    opacity: 1;
-    transition: all 420ms ease-in;
-  }
-  .box #movel{
-    left: 55%;
-    background: #ff0f33;
-  }
-  .overlay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    width: 0;
-    height: 100%;
-    background: #000;
-    opacity: 0.5;
-  }
-  .overlay-active{
-    width: 100%;
-  }
-  .grande#fixo{
-    width: 300px;
-    height: 300px;
-    left: 50%;
-  }
+body{
+  background: #4cb8c4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4cb8c4, #3cd3ad); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.box{
+  width: 90%; /* Adjusted from fixed px to % */
+  max-width: 1200px; /* Added max-width */
+  margin: 0 auto;
+  height: 50vh; /* Adjusted from fixed px to viewport height */
+  position: relative;
+}
+
+.box button{
+  position: absolute;
+  height: 40px;
+  width: 100px;
+  top: 40%;
+  left: 50%;
+  cursor: pointer;
+  border: none;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: #5cba31;
+}
+
+img{
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 0;
+  height: 0;
+}
+
+.active{
+  top: 50%;
+  height: 100%;
+  opacity: 1;
+  transition: all 420ms ease-in;
+}
+
+.box #movel{
+  left: 50%;
+  background: #ff0f33;
+}
+
+.overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 0;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+.overlay-active{
+  width: 100%;
+}
+
+.grande#fixo{
+  width: 50%; /* Adjusted from fixed px to % */
+  height: 50%; /* Adjusted from fixed px to % */
+  left: 50%;
+}

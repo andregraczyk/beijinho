@@ -5,35 +5,14 @@ let num = 0
 let div = document.getElementById("box")
 var clonado = fixo.cloneNode(true)
 
-movel.addEventListener("mouseenter", () =>{
-  // função para mover o botão
-  let randomlf = Math.floor(Math.random() * 1100)
-  let randomhv = Math.floor(Math.random() * 510)
+function moveButton() {
+  let randomlf = Math.floor(Math.random() * div.clientWidth)
+  let randomhv = Math.floor(Math.random() * div.clientHeight)
   movel.style.left = `${randomlf}px`
   movel.style.top = `${randomhv}px`
 
-  // parametro de contagem
   num++
   function cont(){
-
-    // if(num == 4){
-    //   names.innerHTML = "O CARLOS, não é broxa??" 
-    // }else if(num == 7){
-    //   names.innerHTML = "VOU PEGUNTAR DE NOVO"
-    //   setTimeout(() =>{
-    //     names.innerHTML = "O CARLOS É BROXA?????"
-    //   }, 1000)
-    // }else if(num == 15){
-    //   div.appendChild(clonado).style.left = `${randomhv}px`
-    //   div.appendChild(clonado).style.top = `${randomhv}px`
-    // }else if(num == 18){
-    //   names.innerHTML = "Como assim não :("
-    // }else if(num == 22){
-    //   names.innerHTML = "OK, VOCÊ VENCEU"
-    //   fixo.classList.add("grande")
-    //   div.appendChild(clonado).style.display = 'none'
-    //   movel.style.display = 'none'
-    // }
 
     switch (num) {
       case 4:
@@ -61,10 +40,21 @@ movel.addEventListener("mouseenter", () =>{
     }
   }
   cont()
-})
+}
+
+// Check if the user is on a mobile device
+if (window.matchMedia("(max-width: 768px)").matches) {
+  // If they are, move the button when it's clicked
+  movel.addEventListener("click", moveButton)
+} else {
+  // If they're not, move the button when the mouse hovers over it
+  movel.addEventListener("mouseenter", moveButton)
+}
 
 fixo.addEventListener("click", () =>{
   document.getElementById("img").classList.add("active")
   document.getElementById("overlay-active").classList.add("overlay-active")
   movel.style.display = "none"
 })
+
+moveButton();
