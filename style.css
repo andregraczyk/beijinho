@@ -4,9 +4,11 @@
     
   }
   body{
-    background: linear-gradient(to right, #2193b0, #6dd5ed);
-    font-family: 'Inter', sans-serif;
+    background: #4cb8c4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4cb8c4, #3cd3ad); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
   }
+
   h1{
     color: #fff;
     text-align: center;
