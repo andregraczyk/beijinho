@@ -53,7 +53,7 @@ movel.addEventListener("mouseenter", () =>{
         names.innerHTML = "Como assim nao?? :("
       break
       case 19:
-        names.innerHTML = "Ok, venceu"
+        names.innerHTML = "Ok, sabia que ia rolar"
         fixo.classList.add("grande")
         div.appendChild(clonado).style.display = 'none'
         movel.style.display = "none"
